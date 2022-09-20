@@ -1,0 +1,3438 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://ws.server.enexs.xplain.ch/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="ManagedQueryService" targetNamespace="http://ws.server.enexs.xplain.ch/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://ws.server.enexs.xplain.ch/" elementFormDefault="unqualified" targetNamespace="http://ws.server.enexs.xplain.ch/" version="1.0">
+
+  <xs:element name="aircraftDetail" type="tns:aircraftDetail"/>
+
+  <xs:element name="aircraftEngineDetail" type="tns:aircraftEngineDetail"/>
+
+  <xs:element name="banknoteDetail" type="tns:banknoteDetail"/>
+
+  <xs:element name="blankDocumentDetail" type="tns:blankDocumentDetail"/>
+
+  <xs:element name="boatDetail" type="tns:boatDetail"/>
+
+  <xs:element name="boatEngineDetail" type="tns:boatEngineDetail"/>
+
+  <xs:element name="caseDetail" type="tns:caseDetail"/>
+
+  <xs:element name="closeSession" type="tns:closeSession"/>
+
+  <xs:element name="closeSessionResponse" type="tns:closeSessionResponse"/>
+
+  <xs:element name="containerDetail" type="tns:containerDetail"/>
+
+  <xs:element name="detail" type="tns:detail"/>
+
+  <xs:element name="documentDetail" type="tns:documentDetail"/>
+
+  <xs:element name="documentECHDetail" type="tns:documentECHDetail"/>
+
+  <xs:element name="eesBCCheckEndPoint" type="tns:eesBCCheckEndPoint"/>
+
+  <xs:element name="eesBCCheckEndPointResponse" type="tns:eesBCCheckEndPointResponse"/>
+
+  <xs:element name="eesBCDataEntryOffline" type="tns:eesBCDataEntryOffline"/>
+
+  <xs:element name="eesBCDataEntryOfflineResponse" type="tns:eesBCDataEntryOfflineResponse"/>
+
+  <xs:element name="eesPollingCheckEndPoint" type="tns:eesPollingCheckEndPoint"/>
+
+  <xs:element name="eesPollingCheckEndPointResponse" type="tns:eesPollingCheckEndPointResponse"/>
+
+  <xs:element name="eesResponse" type="tns:eesResponse"/>
+
+  <xs:element name="eesTCCheckEndPoint" type="tns:eesTCCheckEndPoint"/>
+
+  <xs:element name="eesTCCheckEndPointResponse" type="tns:eesTCCheckEndPointResponse"/>
+
+  <xs:element name="eesWFEAbortBorderControl" type="tns:eesWFEAbortBorderControl"/>
+
+  <xs:element name="eesWFEAbortBorderControlResponse" type="tns:eesWFEAbortBorderControlResponse"/>
+
+  <xs:element name="eesWFEAddDataToBorderControl" type="tns:eesWFEAddDataToBorderControl"/>
+
+  <xs:element name="eesWFEAddDataToBorderControlResponse" type="tns:eesWFEAddDataToBorderControlResponse"/>
+
+  <xs:element name="eesWFECheckEndPoint" type="tns:eesWFECheckEndPoint"/>
+
+  <xs:element name="eesWFECheckEndPointResponse" type="tns:eesWFECheckEndPointResponse"/>
+
+  <xs:element name="eesWFEEndBorderControl" type="tns:eesWFEEndBorderControl"/>
+
+  <xs:element name="eesWFEEndBorderControlResponse" type="tns:eesWFEEndBorderControlResponse"/>
+
+  <xs:element name="eesWFEIdentificationResult" type="tns:eesWFEIdentificationResult"/>
+
+  <xs:element name="eesWFEIdentificationResultResponse" type="tns:eesWFEIdentificationResultResponse"/>
+
+  <xs:element name="eesWFEStartBorderControl" type="tns:eesWFEStartBorderControl"/>
+
+  <xs:element name="eesWFEStartBorderControlResponse" type="tns:eesWFEStartBorderControlResponse"/>
+
+  <xs:element name="fetchImages" type="tns:fetchImages"/>
+
+  <xs:element name="fetchImagesResponse" type="tns:fetchImagesResponse"/>
+
+  <xs:element name="flushSAMLAuthentication" type="tns:flushSAMLAuthentication"/>
+
+  <xs:element name="flushSAMLAuthenticationResponse" type="tns:flushSAMLAuthenticationResponse"/>
+
+  <xs:element name="getAttachmentContent" type="tns:getAttachmentContent"/>
+
+  <xs:element name="getAttachmentContentResponse" type="tns:getAttachmentContentResponse"/>
+
+  <xs:element name="getConcurrentUsers" type="tns:getConcurrentUsers"/>
+
+  <xs:element name="getConcurrentUsersResponse" type="tns:getConcurrentUsersResponse"/>
+
+  <xs:element name="getControlNumbers" type="tns:getControlNumbers"/>
+
+  <xs:element name="getControlNumbersConfig" type="tns:getControlNumbersConfig"/>
+
+  <xs:element name="getControlNumbersConfigResponse" type="tns:getControlNumbersConfigResponse"/>
+
+  <xs:element name="getControlNumbersResponse" type="tns:getControlNumbersResponse"/>
+
+  <xs:element name="getFullDetails" type="tns:getFullDetails"/>
+
+  <xs:element name="getFullDetailsResponse" type="tns:getFullDetailsResponse"/>
+
+  <xs:element name="getHtmlForLink" type="tns:getHtmlForLink"/>
+
+  <xs:element name="getHtmlForLinkResponse" type="tns:getHtmlForLinkResponse"/>
+
+  <xs:element name="getIdentificationResult" type="tns:getIdentificationResult"/>
+
+  <xs:element name="getIdentificationResultResponse" type="tns:getIdentificationResultResponse"/>
+
+  <xs:element name="getIdentificationSummaries" type="tns:getIdentificationSummaries"/>
+
+  <xs:element name="getIdentificationSummariesResponse" type="tns:getIdentificationSummariesResponse"/>
+
+  <xs:element name="getOfflineDataBaseMetaInfo" type="tns:getOfflineDataBaseMetaInfo"/>
+
+  <xs:element name="getOfflineDataBaseMetaInfoResponse" type="tns:getOfflineDataBaseMetaInfoResponse"/>
+
+  <xs:element name="groundVehicleDetail" type="tns:groundVehicleDetail"/>
+
+  <xs:element name="identificationResultReceived" type="tns:identificationResultReceived"/>
+
+  <xs:element name="identificationResultReceivedResponse" type="tns:identificationResultReceivedResponse"/>
+
+  <xs:element name="industrialEquipmentDetail" type="tns:industrialEquipmentDetail"/>
+
+  <xs:element name="industrialEquipmentPartDetail" type="tns:industrialEquipmentPartDetail"/>
+
+  <xs:element name="informationTechnologyEquipmentDetail" type="tns:informationTechnologyEquipmentDetail"/>
+
+  <xs:element name="killConcurrentUserSession" type="tns:killConcurrentUserSession"/>
+
+  <xs:element name="killConcurrentUserSessionResponse" type="tns:killConcurrentUserSessionResponse"/>
+
+  <xs:element name="licensePlateDetail" type="tns:licensePlateDetail"/>
+
+  <xs:element name="multiQuery" type="tns:multiQuery"/>
+
+  <xs:element name="multiQueryResponse" type="tns:multiQueryResponse"/>
+
+  <xs:element name="newsDetail" type="tns:newsDetail"/>
+
+  <xs:element name="objectECHDetail" type="tns:objectECHDetail"/>
+
+  <xs:element name="openSession" type="tns:openSession"/>
+
+  <xs:element name="openSessionResponse" type="tns:openSessionResponse"/>
+
+  <xs:element name="personDetail" type="tns:personDetail"/>
+
+  <xs:element name="personECHDetail" type="tns:personECHDetail"/>
+
+  <xs:element name="ping" type="tns:ping"/>
+
+  <xs:element name="pingResponse" type="tns:pingResponse"/>
+
+  <xs:element name="pingSAMLAuthenticated" type="tns:pingSAMLAuthenticated"/>
+
+  <xs:element name="pingSAMLAuthenticatedResponse" type="tns:pingSAMLAuthenticatedResponse"/>
+
+  <xs:element name="removeIdentificationRequest" type="tns:removeIdentificationRequest"/>
+
+  <xs:element name="removeIdentificationRequestResponse" type="tns:removeIdentificationRequestResponse"/>
+
+  <xs:element name="ripolNsfObjectDetail" type="tns:ripolNsfObjectDetail"/>
+
+  <xs:element name="saveHLStatistics" type="tns:saveHLStatistics"/>
+
+  <xs:element name="saveHLStatisticsResponse" type="tns:saveHLStatisticsResponse"/>
+
+  <xs:element name="securitiesDetail" type="tns:securitiesDetail"/>
+
+  <xs:element name="setControlNumbersConfig" type="tns:setControlNumbersConfig"/>
+
+  <xs:element name="setControlNumbersConfigResponse" type="tns:setControlNumbersConfigResponse"/>
+
+  <xs:element name="updateOfflineDataBaseCopy" type="tns:updateOfflineDataBaseCopy"/>
+
+  <xs:element name="updateOfflineDataBaseCopyResponse" type="tns:updateOfflineDataBaseCopyResponse"/>
+
+  <xs:element name="vehicleECHDetail" type="tns:vehicleECHDetail"/>
+
+  <xs:element name="vehiclePartDetail" type="tns:vehiclePartDetail"/>
+
+  <xs:element name="vehicleRegistrationDocumentDetail" type="tns:vehicleRegistrationDocumentDetail"/>
+
+  <xs:element name="weaponDetail" type="tns:weaponDetail"/>
+
+  <xs:element name="weaponECHDetail" type="tns:weaponECHDetail"/>
+
+  <xs:complexType name="openSession">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="sessionTimeout" type="xs:int"/>
+      <xs:element minOccurs="0" name="clientInfo" type="tns:clientInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="clientInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="clientName" type="xs:string"/>
+      <xs:element name="clientProduct" type="xs:string"/>
+      <xs:element name="clientVendor" type="xs:string"/>
+      <xs:element name="clientVersion" type="xs:string"/>
+      <xs:element minOccurs="0" name="componentName" type="xs:string"/>
+      <xs:element minOccurs="0" name="cvisAuthorityId" nillable="true" type="xs:integer"/>
+      <xs:element minOccurs="0" name="cvisEndUserRole" nillable="true" type="tns:CvisEndUserRole"/>
+      <xs:element minOccurs="0" name="inBehalfOf" type="xs:string"/>
+      <xs:element minOccurs="0" name="reason" type="xs:string"/>
+      <xs:element minOccurs="0" name="userName" type="xs:string"/>
+      <xs:element minOccurs="0" name="deviceId" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="openSessionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="resultWrapper">
+    <xs:sequence>
+      <xs:element name="fault" type="xs:boolean"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="faultInfo" nillable="true" type="tns:faultInfo"/>
+      <xs:element minOccurs="0" name="result" type="xs:anyType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="faultInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="faultMessage" type="xs:string"/>
+      <xs:element minOccurs="0" name="faultType" type="tns:faultType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="systemFaultInfo">
+    <xs:complexContent>
+      <xs:extension base="tns:faultInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="system" type="tns:searchSystem"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="searchSystem">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="type" type="tns:SystemType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="userSession">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="concurrentUserData" type="tns:concurrentUserData"/>
+      <xs:element minOccurs="0" name="templatesFileContent" type="xs:base64Binary"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="concurrentUserData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="clientName" type="xs:string"/>
+      <xs:element minOccurs="0" name="userId" type="xs:string"/>
+      <xs:element minOccurs="0" name="osUser" type="xs:string"/>
+      <xs:element minOccurs="0" name="userOrganisation" type="xs:string"/>
+      <xs:element minOccurs="0" name="ipAddress" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastActivityDateTime" type="xs:dateTime"/>
+      <xs:element name="sessionTimeoutMinutes" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="multiQuery">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="queryData" type="tns:queryData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="queryData">
+    <xs:complexContent>
+      <xs:extension base="tns:baseQueryData">
+        <xs:sequence>
+          <xs:element default="false" name="codesInReply" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="documentType" type="tns:DocumentType"/>
+          <xs:element default="false" minOccurs="0" name="findAlias" nillable="true" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="aliasMode" type="tns:aliasMode"/>
+          <xs:element minOccurs="0" name="fingerprintInfo" type="tns:fingerprintInfo"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="imageExclusionSystems" nillable="true" type="xs:string"/>
+          <xs:element name="imageFetching" type="tns:imageFetching"/>
+          <xs:element default="false" name="legalPerson" type="xs:boolean"/>
+          <xs:element name="maxHits" type="xs:int"/>
+          <xs:element minOccurs="0" name="maxImages" type="xs:int"/>
+          <xs:element minOccurs="0" name="omitBestFullDetail" nillable="true" type="xs:boolean"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="parameterMap" nillable="true" type="tns:queryParameterEntry"/>
+          <xs:element name="queryType" type="tns:QueryType"/>
+          <xs:element name="searchCombination" type="tns:SearchCombination"/>
+          <xs:element name="searchType" type="tns:SearchType"/>
+          <xs:element default="false" name="shortDetailsExtended" type="xs:boolean"/>
+          <xs:element name="strictHitTypeLimitation" type="xs:boolean"/>
+          <xs:element default="false" name="switchNames" type="xs:boolean"/>
+          <xs:element name="template" type="tns:template"/>
+          <xs:element minOccurs="0" name="logStatisticsQueryType" nillable="true" type="tns:LogStatisticsQueryType"/>
+          <xs:element minOccurs="0" name="locationInfo" nillable="true" type="tns:locationInfo"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="baseQueryData">
+    <xs:sequence>
+      <xs:element name="clientInfo" type="tns:clientInfo"/>
+      <xs:element name="echFullDetails" type="xs:boolean"/>
+      <xs:element name="language" type="tns:LanguageType"/>
+      <xs:element minOccurs="0" name="multiColumnDetails" nillable="true" type="xs:boolean"/>
+      <xs:element name="queryId" type="xs:string"/>
+      <xs:element minOccurs="0" name="testCaseId" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="fingerprintInfo">
+    <xs:sequence>
+      <xs:element name="acquisitionTimestamp" type="xs:dateTime"/>
+      <xs:element name="characterEncoding" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="croppedFingerprints" nillable="true" type="tns:baseFingerprint"/>
+      <xs:element name="destinationAgencyIdentifier" type="xs:string"/>
+      <xs:element name="fingerPrintDeviceFirmwareVersion" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="fingerprints" nillable="true" type="tns:baseFingerprint"/>
+      <xs:element name="identificationName" type="xs:string"/>
+      <xs:element name="pcn" type="xs:string"/>
+      <xs:element name="scanningResolution" type="xs:double"/>
+      <xs:element name="softwareVersion" type="xs:string"/>
+      <xs:element name="sourceAgencyIdentifier" type="xs:string"/>
+      <xs:element name="systemInformation" type="xs:string"/>
+      <xs:element name="tcn" type="xs:string"/>
+      <xs:element name="transmittingResolution" type="xs:double"/>
+      <xs:element name="typeOfTransaction" type="xs:string"/>
+      <xs:element name="usedFingerPrintDevice" type="xs:string"/>
+      <xs:element name="versionNumber" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType abstract="true" name="baseFingerprint">
+    <xs:sequence>
+      <xs:element name="fingerPosition" type="tns:fingerPosition"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="fingerprint">
+    <xs:complexContent>
+      <xs:extension base="tns:baseFingerprint">
+        <xs:sequence>
+          <xs:element name="bitsPerPixel" type="xs:string"/>
+          <xs:element name="compressionAlgorithm" type="xs:string"/>
+          <xs:element name="horizontalLineLength" type="xs:long"/>
+          <xs:element name="horizontalPixelPerInch" type="xs:long"/>
+          <xs:element name="imageBase64" type="xs:string"/>
+          <xs:element name="imageQualityScore" type="xs:int"/>
+          <xs:element minOccurs="0" name="impressionType" type="tns:impressionType"/>
+          <xs:element name="scaleUnits" type="xs:string"/>
+          <xs:element name="verticalLineLength" type="xs:long"/>
+          <xs:element name="verticalPixelPerInch" type="xs:long"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="missingFingerprint">
+    <xs:complexContent>
+      <xs:extension base="tns:baseFingerprint">
+        <xs:sequence>
+          <xs:element name="reason" type="tns:reason"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType abstract="true" name="eesBaseFingerprint">
+    <xs:complexContent>
+      <xs:extension base="tns:baseFingerprint">
+        <xs:sequence>
+          <xs:element name="fingerprintCaptureDate" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="eesFingerprint">
+    <xs:complexContent>
+      <xs:extension base="tns:eesBaseFingerprint">
+        <xs:sequence>
+          <xs:element name="eesFingerprintImpressionType" type="tns:eesFingerprintImpressionType"/>
+          <xs:element name="horizontalLineLength" type="xs:long"/>
+          <xs:element name="verticalLineLength" type="xs:long"/>
+          <xs:element name="transmittedHorizontalPixelPerInch" type="tns:eesFingerprintTransmittedPixelScaleType"/>
+          <xs:element name="transmittedVerticalPixelPerInch" type="tns:eesFingerprintTransmittedPixelScaleType"/>
+          <xs:element name="compressionAlgorithm" type="tns:eesFingerprintCompressionAlgorithmType"/>
+          <xs:element minOccurs="0" name="scannedHorizontalPixelPerInch" type="xs:long"/>
+          <xs:element minOccurs="0" name="scannedVerticalPixelPerInch" type="xs:long"/>
+          <xs:element minOccurs="0" name="imageBase64" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="eesMissingFingerprint">
+    <xs:complexContent>
+      <xs:extension base="tns:eesBaseFingerprint">
+        <xs:sequence>
+          <xs:element name="missingFingerprintReason" type="tns:reason"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="queryParameterEntry">
+    <xs:sequence>
+      <xs:element name="key" type="tns:QueryParameterKey"/>
+      <xs:element name="value" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="template">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="deactivatedServices" nillable="true" type="tns:remoteService"/>
+      <xs:element minOccurs="0" name="predefined" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="remoteServices" nillable="true" type="tns:remoteService"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="remoteService">
+    <xs:sequence>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="timeout" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="locationInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="applicationConfig" nillable="true" type="tns:ApplicationConfigType"/>
+      <xs:element minOccurs="0" name="documentType" nillable="true" type="tns:DocumentCardType"/>
+      <xs:element minOccurs="0" name="standort" nillable="true" type="tns:CodeGroup"/>
+      <xs:element minOccurs="0" name="travelDirection" nillable="true" type="tns:TravelDirectionType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CodeGroup">
+    <xs:sequence>
+      <xs:element name="group" type="xs:string"/>
+      <xs:element name="value" type="xs:string"/>
+      <xs:element name="version" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="multiQueryResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="multiQueryResult">
+    <xs:complexContent>
+      <xs:extension base="tns:result">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="bestFullDetail" type="tns:detail"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="detailList" nillable="true" type="tns:detail"/>
+          <xs:element minOccurs="0" name="identificationSessionId" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="summaryEntryList" nillable="true" type="tns:summaryEntry"/>
+          <xs:element minOccurs="0" name="comment" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="result">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="detail">
+    <xs:complexContent>
+      <xs:extension base="tns:result">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="additionalInfo" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="attachmentLoadingAttempted" type="xs:boolean"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="attachments" nillable="true" type="tns:Attachment"/>
+          <xs:element minOccurs="0" name="confirmationMessageContent" type="xs:string"/>
+          <xs:element minOccurs="0" name="confirmationMessageTitle" type="xs:string"/>
+          <xs:element minOccurs="0" name="date" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="echImportStructures" nillable="true" type="tns:detail"/>
+          <xs:element minOccurs="0" name="exactitude" type="tns:Exactitude"/>
+          <xs:element name="hitIdentifier" type="tns:hitIdentifier"/>
+          <xs:element minOccurs="0" name="importableECH" type="xs:boolean"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="properties" nillable="true" type="tns:propertyEntry"/>
+          <xs:element minOccurs="0" name="rawHtml" type="xs:string"/>
+          <xs:element minOccurs="0" name="rawXml" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="refNumbers" nillable="true" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="searchOrder" nillable="true" type="xs:string"/>
+          <xs:element name="showConfirmationMessage" type="xs:boolean"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="subDetails" nillable="true" type="tns:detail"/>
+          <xs:element minOccurs="0" name="wanted" type="xs:boolean"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="warningCodes" nillable="true" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="warnings" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="Attachment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="attachmentId" type="xs:string"/>
+      <xs:element minOccurs="0" name="base64content" type="xs:string"/>
+      <xs:element minOccurs="0" name="description" type="xs:string"/>
+      <xs:element minOccurs="0" name="fileName" type="xs:string"/>
+      <xs:element minOccurs="0" name="mainRecord" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="mimeType" type="xs:string"/>
+      <xs:element minOccurs="0" name="referenceCount" type="xs:long"/>
+      <xs:element minOccurs="0" name="sizeInBytes" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="Image">
+    <xs:complexContent>
+      <xs:extension base="tns:Attachment">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="FacialImage">
+    <xs:complexContent>
+      <xs:extension base="tns:Image">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="SignatureImage">
+    <xs:complexContent>
+      <xs:extension base="tns:Image">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="File">
+    <xs:complexContent>
+      <xs:extension base="tns:Attachment">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="PDFFile">
+    <xs:complexContent>
+      <xs:extension base="tns:File">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="NISTFile">
+    <xs:complexContent>
+      <xs:extension base="tns:File">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="DOCFile">
+    <xs:complexContent>
+      <xs:extension base="tns:File">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="CSVFile">
+    <xs:complexContent>
+      <xs:extension base="tns:File">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="XLSFile">
+    <xs:complexContent>
+      <xs:extension base="tns:File">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="MPEGFile">
+    <xs:complexContent>
+      <xs:extension base="tns:File">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="hitIdentifier">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cookie" nillable="true" type="xs:string"/>
+      <xs:element name="hitType" type="tns:HitType"/>
+      <xs:element name="sourceId" type="xs:string"/>
+      <xs:element name="sourceTable" type="xs:string"/>
+      <xs:element minOccurs="0" name="subDetail" nillable="true" type="xs:string"/>
+      <xs:element name="system" type="tns:searchSystem"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="propertyEntry">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="attachmentIds" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="column" type="xs:int"/>
+      <xs:element minOccurs="0" name="columnCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="errorFontColor" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="headingType" type="tns:HeadingType"/>
+      <xs:element minOccurs="0" name="highlightType" type="tns:HighlightType"/>
+      <xs:element minOccurs="0" name="key" type="xs:string"/>
+      <xs:element minOccurs="0" name="keyColSpan" type="xs:int"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="nestedProperties" nillable="true" type="tns:propertyEntry"/>
+      <xs:element minOccurs="0" name="row" type="xs:int"/>
+      <xs:element minOccurs="0" name="stringValue" type="xs:string"/>
+      <xs:element minOccurs="0" name="translatedKey" type="xs:string"/>
+      <xs:element minOccurs="0" name="valueColSpan" type="xs:int"/>
+      <xs:element minOccurs="0" name="vertical" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="personDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:detail">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="addresses" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="birthDate" type="xs:string"/>
+          <xs:element minOccurs="0" name="documentCountry" type="tns:codeType"/>
+          <xs:element minOccurs="0" name="documentNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="documentType" type="xs:string"/>
+          <xs:element minOccurs="0" name="familyNames" type="xs:string"/>
+          <xs:element minOccurs="0" name="firstNames" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="hints" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="identityType" type="tns:IdentityType"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="nationalities" nillable="true" type="tns:codeType"/>
+          <xs:element minOccurs="0" name="sex" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="codeType">
+    <xs:sequence>
+      <xs:element name="code" type="xs:string"/>
+      <xs:element name="codeGroup" type="tns:codeGroup"/>
+      <xs:element name="fullText" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="documentDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:detail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="birthDate" type="xs:string"/>
+          <xs:element minOccurs="0" name="country" type="tns:codeType"/>
+          <xs:element minOccurs="0" name="fingerprintMatch" type="tns:fingerprintMatch"/>
+          <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+          <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+          <xs:element minOccurs="0" name="number" type="xs:string"/>
+          <xs:element minOccurs="0" name="sex" type="xs:string"/>
+          <xs:element minOccurs="0" name="type" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="vehicleDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:detail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="category" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="colours" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="country" type="tns:codeType"/>
+          <xs:element minOccurs="0" name="manufacturer" type="xs:string"/>
+          <xs:element minOccurs="0" name="model" type="xs:string"/>
+          <xs:element minOccurs="0" name="status" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="groundVehicleDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:vehicleDetail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="licensePlate" type="xs:string"/>
+          <xs:element minOccurs="0" name="productionYear" type="xs:string"/>
+          <xs:element minOccurs="0" name="vin" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="aircraftDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:vehicleDetail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="identityNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="nameOfIndividualAircraft" type="xs:string"/>
+          <xs:element minOccurs="0" name="yearOfModel" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="boatDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:vehicleDetail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="identityNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="nameOfBoat" type="xs:string"/>
+          <xs:element minOccurs="0" name="yearOfModel" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="licensePlateDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:detail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="country" type="tns:codeType"/>
+          <xs:element minOccurs="0" name="licensePlate" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="boatEngineDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:objectDetail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="category" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="objectDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:detail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="colour" type="xs:string"/>
+          <xs:element minOccurs="0" name="country" type="tns:codeType"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="identityNumbers" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="manufacturer" type="xs:string"/>
+          <xs:element minOccurs="0" name="material" type="xs:string"/>
+          <xs:element minOccurs="0" name="model" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="containerDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:objectDetail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="category" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="industrialEquipmentDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:objectDetail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="category" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="securitiesDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:objectDetail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="category" type="xs:string"/>
+          <xs:element minOccurs="0" name="currency" type="tns:codeType"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="weaponDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:objectDetail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="category" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="banknoteDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:objectDetail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="currency" type="tns:codeType"/>
+          <xs:element minOccurs="0" name="value" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="blankDocumentDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:objectDetail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="category" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="vehicleRegistrationDocumentDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:objectDetail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="category" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="caseDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:detail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="caseNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="linkLine" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="newsDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:detail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="linkLine" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="flAnimal">
+    <xs:complexContent>
+      <xs:extension base="tns:objectDetail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="race" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="flIdCard">
+    <xs:complexContent>
+      <xs:extension base="tns:documentDetail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="description" type="xs:string"/>
+          <xs:element minOccurs="0" name="status" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="flObjectDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:objectDetail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="category" type="xs:string"/>
+          <xs:element minOccurs="0" name="description" type="xs:string"/>
+          <xs:element minOccurs="0" name="status" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="flWeaponDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:weaponDetail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="description" type="xs:string"/>
+          <xs:element minOccurs="0" name="status" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="ripolNsfObjectDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:objectDetail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="dateOfEngravement" type="xs:string"/>
+          <xs:element minOccurs="0" name="engravedtext" type="xs:string"/>
+          <xs:element minOccurs="0" name="type" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="aircraftEngineDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:objectDetail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="category" type="xs:string"/>
+          <xs:element minOccurs="0" name="serialNumber" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="industrialEquipmentPartDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:objectDetail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="category" type="xs:string"/>
+          <xs:element minOccurs="0" name="serialNumber" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="vehiclePartDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:objectDetail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="category" type="xs:string"/>
+          <xs:element minOccurs="0" name="serialNumber" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="informationTechnologyEquipmentDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:objectDetail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="category" type="xs:string"/>
+          <xs:element minOccurs="0" name="serialNumber" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="personECHDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:detail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="remark" type="xs:string"/>
+          <xs:element minOccurs="0" name="birthCountry" type="tns:Code"/>
+          <xs:element minOccurs="0" name="birthDate" type="tns:XplainDate"/>
+          <xs:element minOccurs="0" name="birthPlace" type="xs:string"/>
+          <xs:element minOccurs="0" name="currentName" type="xs:string"/>
+          <xs:element name="dead" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="deathDate" type="tns:XplainDate"/>
+          <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="nationalities" nillable="true" type="tns:Code"/>
+          <xs:element minOccurs="0" name="officialName" type="xs:string"/>
+          <xs:element minOccurs="0" name="originalName" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="placesOfOrigin" nillable="true" type="tns:Code"/>
+          <xs:element minOccurs="0" name="profession" type="xs:string"/>
+          <xs:element minOccurs="0" name="representedBy" type="xs:string"/>
+          <xs:element minOccurs="0" name="residencePermit" type="tns:Code"/>
+          <xs:element minOccurs="0" name="residencePermitArrivalDate" type="tns:XplainDate"/>
+          <xs:element minOccurs="0" name="residencePermitValidTo" type="tns:XplainDate"/>
+          <xs:element minOccurs="0" name="residencePermitAdmission" type="tns:Code"/>
+          <xs:element minOccurs="0" name="residencePermitAuthorization" type="tns:Code"/>
+          <xs:element minOccurs="0" name="residencePermitPurposeOfStay" type="tns:Code"/>
+          <xs:element minOccurs="0" name="kindOfAdmission" type="tns:Code"/>
+          <xs:element minOccurs="0" name="sex" type="tns:Code"/>
+          <xs:element minOccurs="0" name="typeOfInvolvedParty" type="tns:TypeOfInvolvedParty"/>
+          <xs:element minOccurs="0" name="zemisNr" type="xs:string"/>
+          <xs:element minOccurs="0" name="zemisAugPersonStatus" type="tns:Code"/>
+          <xs:element minOccurs="0" name="referenceOfData" type="xs:string"/>
+          <xs:element minOccurs="0" name="firstNameOfFather" type="xs:string"/>
+          <xs:element minOccurs="0" name="firstNameOfMother" type="xs:string"/>
+          <xs:element minOccurs="0" name="lastNameOfMother" type="xs:string"/>
+          <xs:element minOccurs="0" name="officialNameOfMother" type="xs:string"/>
+          <xs:element minOccurs="0" name="firstNameOfSpouse" type="xs:string"/>
+          <xs:element minOccurs="0" name="lastNameOfFather" type="xs:string"/>
+          <xs:element minOccurs="0" name="lastNameOfSpouse" type="xs:string"/>
+          <xs:element minOccurs="0" name="maritalStatus" type="tns:Code"/>
+          <xs:element minOccurs="0" name="originalNameOfMother" type="xs:string"/>
+          <xs:element minOccurs="0" name="language" type="tns:Code"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="secondaryLanguages" nillable="true" type="tns:Code"/>
+          <xs:element minOccurs="0" name="hasSwissParent" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="hasSwissSpouse" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="politicalMunicipality" type="tns:Code"/>
+          <xs:element minOccurs="0" name="resMunicipality" type="tns:Code"/>
+          <xs:element minOccurs="0" name="nDossierNumber" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="aigRemarks" nillable="true" type="tns:CodeWithValidityRange"/>
+          <xs:element minOccurs="0" name="identityVerified" type="tns:Code"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="meansOfCommunication" nillable="true" type="tns:meansOfCommunicationECHDetail"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="address" nillable="true" type="tns:addressECHDetail"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="aliases" nillable="true" type="tns:aliasECHDetail"/>
+          <xs:element minOccurs="0" name="professionPosition" type="xs:string"/>
+          <xs:element minOccurs="0" name="pcnNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="semNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="socialNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="geresNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="personalNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="originateNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="role" type="tns:Code"/>
+          <xs:element minOccurs="0" name="state" type="tns:Code"/>
+          <xs:element minOccurs="0" name="category" type="tns:Code"/>
+          <xs:element name="formIsText" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="form" type="tns:Code"/>
+          <xs:element minOccurs="0" name="formText" type="xs:string"/>
+          <xs:element minOccurs="0" name="liquidityDate" type="tns:XplainDate"/>
+          <xs:element name="dataOriginIsText" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="dataOrigin" type="tns:Code"/>
+          <xs:element minOccurs="0" name="dataOriginText" type="xs:string"/>
+          <xs:element minOccurs="0" name="dataOriginDate" type="tns:XplainDate"/>
+          <xs:element minOccurs="0" name="location" type="xs:string"/>
+          <xs:element minOccurs="0" name="headOffice" type="xs:string"/>
+          <xs:element minOccurs="0" name="country" type="tns:Code"/>
+          <xs:element minOccurs="0" name="uidNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="burNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="websiteUrl" type="xs:string"/>
+          <xs:element minOccurs="0" name="lineOfBusiness" type="xs:string"/>
+          <xs:element minOccurs="0" name="type" type="tns:Code"/>
+          <xs:element minOccurs="0" name="entryDate" type="tns:XplainDate"/>
+          <xs:element minOccurs="0" name="biometricDataOrderDate" type="tns:XplainDate"/>
+          <xs:element minOccurs="0" name="biometricDataCaptureDate" type="tns:XplainDate"/>
+          <xs:element minOccurs="0" name="biometricDataValidTo" type="tns:XplainDate"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="documents" nillable="true" type="tns:documentECHDetail"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="imprisonments" nillable="true" type="tns:imprisonmentECHDetail"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="sidePersons" nillable="true" type="tns:sidePersonECHDetail"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="Code">
+    <xs:sequence>
+      <xs:element name="gruppe" type="xs:string"/>
+      <xs:element name="systemnr" type="xs:string"/>
+      <xs:element minOccurs="0" name="text" type="xs:string"/>
+      <xs:element name="version" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="XplainDate">
+    <xs:sequence>
+      <xs:element name="dateValue" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CodeWithValidityRange">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="code" type="tns:Code"/>
+      <xs:element minOccurs="0" name="validFrom" type="tns:XplainDate"/>
+      <xs:element minOccurs="0" name="validTo" type="tns:XplainDate"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="meansOfCommunicationECHDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:detail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="remark" type="xs:string"/>
+          <xs:element minOccurs="0" name="text" type="xs:string"/>
+          <xs:element minOccurs="0" name="type" type="tns:Code"/>
+          <xs:element minOccurs="0" name="validFrom" type="tns:XplainDate"/>
+          <xs:element minOccurs="0" name="validTo" type="tns:XplainDate"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="addressECHDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:detail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="additional" type="xs:string"/>
+          <xs:element minOccurs="0" name="addressLine" type="xs:string"/>
+          <xs:element minOccurs="0" name="careOf" type="xs:string"/>
+          <xs:element minOccurs="0" name="country" type="tns:Code"/>
+          <xs:element minOccurs="0" name="houseNumber" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="meansOfCommunication" nillable="true" type="tns:meansOfCommunicationECHDetail"/>
+          <xs:element minOccurs="0" name="placeText" type="xs:string"/>
+          <xs:element minOccurs="0" name="placeType" type="tns:Code"/>
+          <xs:element name="poBox" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="poBoxNumber" type="xs:string"/>
+          <xs:element name="print" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="remark" type="xs:string"/>
+          <xs:element minOccurs="0" name="salutation" type="xs:string"/>
+          <xs:element minOccurs="0" name="street" type="xs:string"/>
+          <xs:element minOccurs="0" name="validFrom" type="tns:XplainDate"/>
+          <xs:element minOccurs="0" name="validTo" type="tns:XplainDate"/>
+          <xs:element minOccurs="0" name="window" type="xs:string"/>
+          <xs:element name="windowManual" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="zipCode" type="tns:Code"/>
+          <xs:element minOccurs="0" name="zipText" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="aliasECHDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:detail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="birthCountry" type="tns:Code"/>
+          <xs:element minOccurs="0" name="birthDate" type="tns:XplainDate"/>
+          <xs:element minOccurs="0" name="birthPlace" type="xs:string"/>
+          <xs:element minOccurs="0" name="category" type="tns:Code"/>
+          <xs:element minOccurs="0" name="currentName" type="xs:string"/>
+          <xs:element minOccurs="0" name="dataOrigin" type="tns:Code"/>
+          <xs:element minOccurs="0" name="dataOriginDate" type="tns:XplainDate"/>
+          <xs:element name="dataOriginIsText" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="dataOriginText" type="xs:string"/>
+          <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+          <xs:element minOccurs="0" name="form" type="tns:Code"/>
+          <xs:element name="formIsText" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="formText" type="xs:string"/>
+          <xs:element minOccurs="0" name="headOffice" type="xs:string"/>
+          <xs:element minOccurs="0" name="identityType" type="tns:Code"/>
+          <xs:element minOccurs="0" name="identityVerified" type="tns:Code"/>
+          <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+          <xs:element minOccurs="0" name="liquidityDate" type="tns:XplainDate"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="nationalities" nillable="true" type="tns:Code"/>
+          <xs:element minOccurs="0" name="officeCountry" type="tns:Code"/>
+          <xs:element minOccurs="0" name="originalName" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="placesOfOrigin" nillable="true" type="tns:Code"/>
+          <xs:element minOccurs="0" name="remark" type="xs:string"/>
+          <xs:element minOccurs="0" name="representedBy" type="xs:string"/>
+          <xs:element minOccurs="0" name="sex" type="tns:Code"/>
+          <xs:element minOccurs="0" name="source" type="tns:Code"/>
+          <xs:element minOccurs="0" name="state" type="tns:Code"/>
+          <xs:element minOccurs="0" name="status" type="tns:Code"/>
+          <xs:element minOccurs="0" name="uiNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="websiteUrl" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="documentECHDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:detail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="typeOfObject" type="tns:Code"/>
+          <xs:element minOccurs="0" name="issuingCountry" type="tns:Code"/>
+          <xs:element minOccurs="0" name="number" type="xs:string"/>
+          <xs:element minOccurs="0" name="issueDate" type="tns:XplainDate"/>
+          <xs:element minOccurs="0" name="validTo" type="tns:XplainDate"/>
+          <xs:element minOccurs="0" name="officialName" type="xs:string"/>
+          <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+          <xs:element minOccurs="0" name="sex" type="tns:Code"/>
+          <xs:element minOccurs="0" name="nationality" type="tns:Code"/>
+          <xs:element minOccurs="0" name="birthDate" type="tns:XplainDate"/>
+          <xs:element minOccurs="0" name="referenceOfData" type="xs:string"/>
+          <xs:element minOccurs="0" name="personalNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="issuingAuthority" type="xs:string"/>
+          <xs:element minOccurs="0" name="category" type="xs:string"/>
+          <xs:element minOccurs="0" name="condition" type="xs:string"/>
+          <xs:element minOccurs="0" name="remark" type="xs:string"/>
+          <xs:element minOccurs="0" name="authDate" type="tns:XplainDate"/>
+          <xs:element minOccurs="0" name="authUser" type="tns:Code"/>
+          <xs:element minOccurs="0" name="authType" type="tns:TypeOfAuth"/>
+          <xs:element minOccurs="0" name="auth" type="tns:Code"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="imprisonmentECHDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:detail">
+        <xs:sequence>
+          <xs:element name="active" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="endDate" type="tns:XplainDate"/>
+          <xs:element minOccurs="0" name="entryDate" type="tns:XplainDate"/>
+          <xs:element minOccurs="0" name="execForm" type="tns:Code"/>
+          <xs:element minOccurs="0" name="execLocation" type="tns:Code"/>
+          <xs:element minOccurs="0" name="execLocationString" type="xs:string"/>
+          <xs:element minOccurs="0" name="facts" type="xs:string"/>
+          <xs:element minOccurs="0" name="imprisonmentType" type="tns:Code"/>
+          <xs:element minOccurs="0" name="orderingAuthority" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="reasons" nillable="true" type="tns:Code"/>
+          <xs:element minOccurs="0" name="remark" type="xs:string"/>
+          <xs:element minOccurs="0" name="responsibleAuthority" type="tns:Code"/>
+          <xs:element name="responsibleAuthorityIsText" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="responsibleAuthorityText" type="xs:string"/>
+          <xs:element minOccurs="0" name="responsibleJudge" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="sidePersonECHDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:detail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="addressWindow" type="xs:string"/>
+          <xs:element minOccurs="0" name="birthDate" type="tns:XplainDate"/>
+          <xs:element minOccurs="0" name="callName" type="xs:string"/>
+          <xs:element minOccurs="0" name="foreignerWithCh" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="liveNotCh" type="xs:boolean"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="meansOfCommunication" nillable="true" type="tns:meansOfCommunicationECHDetail"/>
+          <xs:element minOccurs="0" name="officialName" type="xs:string"/>
+          <xs:element minOccurs="0" name="profession" type="xs:string"/>
+          <xs:element minOccurs="0" name="remark" type="xs:string"/>
+          <xs:element minOccurs="0" name="residencePermit" type="tns:Code"/>
+          <xs:element minOccurs="0" name="residencePurpose" type="tns:Code"/>
+          <xs:element minOccurs="0" name="sex" type="tns:Code"/>
+          <xs:element minOccurs="0" name="sidePersonType" type="tns:Code"/>
+          <xs:element minOccurs="0" name="zemisNumber" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="vehicleECHDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:detail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="capacity" type="xs:long"/>
+          <xs:element minOccurs="0" name="country" type="tns:Code"/>
+          <xs:element minOccurs="0" name="firstInscription" type="tns:XplainDate"/>
+          <xs:element minOccurs="0" name="licensePlateNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="manufacturer" type="xs:string"/>
+          <xs:element minOccurs="0" name="masterNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="metallized" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="modelType" type="xs:string"/>
+          <xs:element minOccurs="0" name="power" type="xs:long"/>
+          <xs:element minOccurs="0" name="typeOfVehicle" type="tns:Code"/>
+          <xs:element minOccurs="0" name="vehicleColour" type="tns:Code"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="additionalColours" nillable="true" type="tns:Code"/>
+          <xs:element minOccurs="0" name="vin" type="xs:string"/>
+          <xs:element minOccurs="0" name="vehicleForm" type="tns:Code"/>
+          <xs:element minOccurs="0" name="engineNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="typeApproval" type="xs:string"/>
+          <xs:element minOccurs="0" name="lastExaminationDate" type="tns:XplainDate"/>
+          <xs:element minOccurs="0" name="insuranceCompany" type="xs:string"/>
+          <xs:element minOccurs="0" name="insuranceCompanyCode" type="tns:Code"/>
+          <xs:element minOccurs="0" name="owner" type="tns:personECHDetail"/>
+          <xs:element minOccurs="0" name="role" type="tns:Code"/>
+          <xs:element minOccurs="0" name="markModel" type="tns:Code"/>
+          <xs:element minOccurs="0" name="specialFeatures" type="xs:string"/>
+          <xs:element minOccurs="0" name="value" type="xs:double"/>
+          <xs:element minOccurs="0" name="firstInscriptionHold" type="tns:XplainDate"/>
+          <xs:element minOccurs="0" name="canton" type="tns:Code"/>
+          <xs:element minOccurs="0" name="inOperation" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="insuranceRemark" type="xs:string"/>
+          <xs:element minOccurs="0" name="literalRemark" type="xs:string"/>
+          <xs:element minOccurs="0" name="literalText" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="licensePlates" nillable="true" type="tns:licensePlateECHDetail"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="licensePlateECHDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:detail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="type" type="tns:Code"/>
+          <xs:element minOccurs="0" name="changeable" type="tns:TypeOfChangeableLicensePlate"/>
+          <xs:element minOccurs="0" name="country" type="tns:Code"/>
+          <xs:element minOccurs="0" name="number" type="xs:string"/>
+          <xs:element minOccurs="0" name="typeOfLicensePlate" type="tns:TypeOfLicensePlate"/>
+          <xs:element minOccurs="0" name="colour" type="tns:Code"/>
+          <xs:element minOccurs="0" name="remark" type="xs:string"/>
+          <xs:element minOccurs="0" name="suffix" type="tns:Code"/>
+          <xs:element minOccurs="0" name="reference" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="weaponECHDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:detail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="calibre" type="xs:string"/>
+          <xs:element minOccurs="0" name="identificationNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="manufacturer" type="xs:string"/>
+          <xs:element minOccurs="0" name="model" type="xs:string"/>
+          <xs:element minOccurs="0" name="typeOfWeapon" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="objectECHDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:detail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="isFreeText" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="itemCount" type="xs:long"/>
+          <xs:element minOccurs="0" name="typeOfCountMode" type="tns:TypeOfCountMode"/>
+          <xs:element minOccurs="0" name="isBrought" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="type" type="tns:Code"/>
+          <xs:element minOccurs="0" name="dkNumber" type="xs:string"/>
+          <xs:element name="markIsText" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="mark" type="tns:Code"/>
+          <xs:element minOccurs="0" name="markText" type="xs:string"/>
+          <xs:element name="modelIsText" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="model" type="tns:Code"/>
+          <xs:element minOccurs="0" name="modelText" type="xs:string"/>
+          <xs:element minOccurs="0" name="country" type="tns:Code"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="colours" nillable="true" type="tns:Code"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="materials" nillable="true" type="tns:Code"/>
+          <xs:element minOccurs="0" name="calibreOfFireArm" type="tns:Code"/>
+          <xs:element minOccurs="0" name="remark" type="xs:string"/>
+          <xs:element minOccurs="0" name="value" type="xs:double"/>
+          <xs:element minOccurs="0" name="valueIsApprox" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="valueIsUnknown" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="seizureDate" type="tns:XplainDate"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="identificationNumbers" nillable="true" type="tns:identificationNumberECHDetail"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="engravings" nillable="true" type="tns:engravingECHDetail"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="measurements" nillable="true" type="tns:measurementECHDetail"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="identificationNumberECHDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:detail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="number" type="xs:string"/>
+          <xs:element minOccurs="0" name="unique" type="xs:boolean"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="engravingECHDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:detail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="engravingDate" type="tns:XplainDate"/>
+          <xs:element minOccurs="0" name="label" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="measurementECHDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:detail">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="unit" type="xs:string"/>
+          <xs:element minOccurs="0" name="valueFrom" type="xs:decimal"/>
+          <xs:element minOccurs="0" name="valueTo" type="xs:decimal"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="summaryEntry">
+    <xs:sequence>
+      <xs:element name="error" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="errorText" type="xs:string"/>
+      <xs:element name="exactHitCount" type="xs:int"/>
+      <xs:element name="filterStatus" type="tns:filterStatus"/>
+      <xs:element name="hasMoreHits" type="xs:boolean"/>
+      <xs:element name="inexactHitCount" type="xs:int"/>
+      <xs:element name="summaryType" type="tns:summaryType"/>
+      <xs:element name="system" type="tns:searchSystem"/>
+      <xs:element minOccurs="0" name="timeSpan" type="xs:double"/>
+      <xs:element name="totalHitCount" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eesWFEAbortBorderControl">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="eesWFEAbortBorderControlData" type="tns:eesWFEAbortBorderControlData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eesWFEAbortBorderControlData">
+    <xs:complexContent>
+      <xs:extension base="tns:eesBaseQueryData">
+        <xs:sequence>
+          <xs:element name="travelDocumentIdentifier" type="tns:travelDocumentIdentifier"/>
+          <xs:element name="borderCrossingPoint" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="eesBaseQueryData">
+    <xs:complexContent>
+      <xs:extension base="tns:baseQueryData">
+        <xs:sequence>
+          <xs:element name="eesEndUserRoleCode" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="travelDocumentIdentifier">
+    <xs:sequence>
+      <xs:element name="documentNumber" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eesWFEAbortBorderControlResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="calculatorResult" type="tns:calculatorResult"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="errorMessages" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="fiIdStoredInTravellerFile" type="xs:string"/>
+      <xs:element minOccurs="0" name="fpIdStoredInTravellerFile" type="xs:string"/>
+      <xs:element minOccurs="0" name="identificationResults" type="tns:multiQueryResult"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="requiredData" nillable="true" type="xs:string"/>
+      <xs:element minOccurs="0" name="verificationAndSearchResults" type="tns:multiQueryResult"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="warningFlags" nillable="true" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="calculatorResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="calculatorResultEntry" type="tns:calculatorResultEntry"/>
+      <xs:element minOccurs="0" name="calculatorResultExit" type="tns:calculatorResultExit"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="calculatorResultEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="authorisedDurationOfStay" type="xs:duration"/>
+      <xs:element minOccurs="0" name="authorisedStayUntilDateTime" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="entryDateTime" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="remainingNumberOfEntries" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="calculatorResultExit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="authorisedStayUntilDateTime" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="durationOfOverstay" type="xs:duration"/>
+      <xs:element minOccurs="0" name="exitDateTime" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="remainingAuthorisedDurationOfStay" type="xs:duration"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="identificationResultReceived">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="identifierPCN" type="xs:string"/>
+      <xs:element minOccurs="0" name="error" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="errorText" type="xs:string"/>
+      <xs:element minOccurs="0" name="hitCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="hitCountSpecified" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="identificationResultReceivedResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="identificationSummaries">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dummy" type="xs:boolean"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="identificationSummaries" nillable="true" type="tns:identificationSummary"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="identificationSummary">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="entries" nillable="true" type="tns:identificationEntry"/>
+      <xs:element name="identifierPcn" type="xs:string"/>
+      <xs:element name="name" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="identificationEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="errorText" type="xs:string"/>
+      <xs:element name="errorType" type="tns:identificationErrorType"/>
+      <xs:element minOccurs="0" name="hitCount" type="xs:int"/>
+      <xs:element name="hitCountSpecified" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="searchSystem" type="tns:searchSystem"/>
+      <xs:element minOccurs="0" name="sessionId" type="xs:string"/>
+      <xs:element name="state" type="tns:identificationState"/>
+      <xs:element name="timestamp" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getHtmlForLink">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="linkUrl" type="xs:string"/>
+      <xs:element minOccurs="0" name="clientInfo" type="tns:clientInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getHtmlForLinkResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getConcurrentUsers">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getConcurrentUsersResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="concurrentUserSessions">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="concurrentUserDataList" nillable="true" type="tns:concurrentUserData"/>
+      <xs:element minOccurs="0" name="dummy" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="flushSAMLAuthentication">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="clientInfo" type="tns:clientInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="flushSAMLAuthenticationResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eesBCCheckEndPoint">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="eesBCCheckEndPointResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eesWFEIdentificationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="eesWFEIdentificationResultData" type="tns:eesWFEIdentificationResultData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eesWFEIdentificationResultData">
+    <xs:complexContent>
+      <xs:extension base="tns:eesBaseQueryData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="wfeScopeModifiers" type="tns:wfeScopeModifiers"/>
+          <xs:element name="travelDocumentIdentifier" type="tns:travelDocumentIdentifier"/>
+          <xs:element name="selectedResponseDataForIdentification" type="tns:selectedResponseDataForIdentification"/>
+          <xs:element name="borderCrossingPoint" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="wfeScopeModifiers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="travelHistoryDateTimeFrom" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="travelHistoryDateTimeTo" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="visaApplicationsModifierCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="calculatorScopeEntryDateTime" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="calculatorScopeExitDateTime" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="selectedResponseDataForIdentification">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="eesIdTravellerFileId" type="xs:string"/>
+      <xs:element minOccurs="0" name="eesAlphanumericIdTravellerFileId" type="xs:string"/>
+      <xs:element minOccurs="0" name="visIdVisaApplicationData" type="tns:visaApplicationData"/>
+      <xs:element minOccurs="0" name="visAlphanumericIdVisaInformationData" type="tns:visaInformationData"/>
+      <xs:element minOccurs="0" name="visDirectIdVisaInformationData" type="tns:visaInformationData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="visaApplicationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="visaStickerNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="visaApplicationNumber" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="visaInformationData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="visaStickerNumber" type="xs:string"/>
+      <xs:element minOccurs="0" name="visaTypeCode" type="xs:string"/>
+      <xs:element name="visaStickerFilledInManually" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="periodStartTimestamp" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="periodEndTimestamp" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="durationOfStayInDays" type="xs:long"/>
+      <xs:element minOccurs="0" name="numberOfEntriesCode" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eesWFEIdentificationResultResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="saveHLStatistics">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="searchHLXmlModel" type="tns:searchHLXmlModel"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="searchHLXmlModel">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="transactionType" type="tns:transactionTypeEnum"/>
+      <xs:element minOccurs="0" name="typeOfQuery" type="xs:string"/>
+      <xs:element minOccurs="0" name="id" type="xs:long"/>
+      <xs:element minOccurs="0" name="mandant" type="xs:string"/>
+      <xs:element minOccurs="0" name="deviceId" type="xs:string"/>
+      <xs:element minOccurs="0" name="duration" type="xs:long"/>
+      <xs:element minOccurs="0" name="result" type="xs:string"/>
+      <xs:element minOccurs="0" name="pcn" type="xs:string"/>
+      <xs:element minOccurs="0" name="fingerprintReaderDeviceId" type="xs:string"/>
+      <xs:element minOccurs="0" name="fingerprintQuantityInInput" type="xs:int"/>
+      <xs:element minOccurs="0" name="requestUser" type="xs:string"/>
+      <xs:element minOccurs="0" name="requestTimestamp" type="xs:long"/>
+      <xs:element minOccurs="0" name="standort" type="tns:CodeGroup"/>
+      <xs:element minOccurs="0" name="applicationConfig" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="travelDirection" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="documentType" type="xs:decimal"/>
+      <xs:element minOccurs="0" name="relatedInformation" type="tns:relatedInformation"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="relatedInformation">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="queriedSystems" nillable="true" type="tns:queriedSystem"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="queriedSystem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="saveHLStatisticsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="fetchImages">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fullQueryData" type="tns:fullQueryData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="fullQueryData">
+    <xs:complexContent>
+      <xs:extension base="tns:baseQueryData">
+        <xs:sequence>
+          <xs:element name="hitIdentifier" type="tns:hitIdentifier"/>
+          <xs:element default="false" minOccurs="0" name="ignoreRelatedHits" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="logStatisticsQueryType" nillable="true" type="tns:LogStatisticsQueryType"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="fetchImagesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="images">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dummy" type="xs:boolean"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="images" nillable="true" type="tns:Attachment"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pingSAMLAuthenticated">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="clientInfo" type="tns:clientInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="pingSAMLAuthenticatedResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eesWFEStartBorderControl">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="eesWFEStartBorderControlData" type="tns:eesWFEStartBorderControlData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eesWFEStartBorderControlData">
+    <xs:complexContent>
+      <xs:extension base="tns:eesBaseQueryData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="wfeScopeModifiers" type="tns:wfeScopeModifiers"/>
+          <xs:element name="travelDocumentData" type="tns:travelDocumentData"/>
+          <xs:element minOccurs="0" name="collectedDataToStartBorderControl" type="tns:collectedDataToStartBorderControl"/>
+          <xs:element minOccurs="0" name="selectedResponseData" type="tns:selectedResponseData"/>
+          <xs:element name="borderCrossingPoint" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="travelDocumentData">
+    <xs:sequence>
+      <xs:element name="familyName" type="tns:nameData"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="firstName" nillable="true" type="tns:nameData"/>
+      <xs:element name="birthDate" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" name="nationalityCode" type="xs:string"/>
+      <xs:element name="genderCode" type="xs:string"/>
+      <xs:element name="travelDocumentIdentifier" type="tns:travelDocumentIdentifier"/>
+      <xs:element name="validUntilDate" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="nameData">
+    <xs:sequence>
+      <xs:element name="nameValue" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="alternativeSpelling" nillable="true" type="tns:nameSpellingData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="nameSpellingData">
+    <xs:sequence>
+      <xs:element name="nameSpelling" type="xs:string"/>
+      <xs:element name="nameDataSourceCode" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="collectedDataToStartBorderControl">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="eesFacialImageInfo" type="tns:eesFacialImageInfo"/>
+      <xs:element minOccurs="0" name="eesFingerprintInfo" type="tns:eesFingerprintInfo"/>
+      <xs:element name="personStatusCode" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eesFacialImageInfo">
+    <xs:complexContent>
+      <xs:extension base="tns:eesBaseNISTFileInfo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="eesFacialImage" type="tns:eesFacialImage"/>
+          <xs:element minOccurs="0" name="notProvidedFacialImageReasonCode" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType abstract="true" name="eesBaseNISTFileInfo">
+    <xs:sequence>
+      <xs:element name="sourceAgencyIdentifier" type="xs:string"/>
+      <xs:element name="tcn" type="xs:string"/>
+      <xs:element name="characterEncoding" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eesFacialImage">
+    <xs:sequence>
+      <xs:element name="photoCaptureDate" type="xs:dateTime"/>
+      <xs:element name="horizontalLineLength" type="xs:long"/>
+      <xs:element name="verticalLineLength" type="xs:long"/>
+      <xs:element name="compressionAlgorithm" type="tns:eesFacialImageCompressionAlgorithmType"/>
+      <xs:element name="imageBase64" type="xs:string"/>
+      <xs:element minOccurs="0" name="fiSourceCode" type="xs:string"/>
+      <xs:element name="eesFacialImageQualityValue" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eesFingerprintInfo">
+    <xs:complexContent>
+      <xs:extension base="tns:eesBaseNISTFileInfo">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="fingerprints" nillable="true" type="tns:eesBaseFingerprint"/>
+          <xs:element minOccurs="0" name="notProvidedFingerprintsReasonCode" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="selectedResponseData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="eesTravellerFileId" type="xs:string"/>
+      <xs:element minOccurs="0" name="visVisaApplicationData" type="tns:visaApplicationData"/>
+      <xs:element minOccurs="0" name="etiasTravelAuthApplicationNumber" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eesWFEStartBorderControlResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="closeSession">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="clientInfo" type="tns:clientInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="closeSessionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eesBCDataEntryOffline">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="eesBCPersonDataEntry" type="tns:eesBCPersonDataEntry"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eesBCPersonDataEntry">
+    <xs:complexContent>
+      <xs:extension base="tns:eesBaseQueryData">
+        <xs:sequence>
+          <xs:element name="travelDocument" type="tns:travelDocumentData"/>
+          <xs:element name="eesFacialImageInfo" type="tns:eesFacialImageInfo"/>
+          <xs:element name="eesFingerprintInfo" type="tns:eesFingerprintInfo"/>
+          <xs:element minOccurs="0" name="entryRecord" type="tns:entryBorderRecordToDataEntryOffline"/>
+          <xs:element minOccurs="0" name="exitRecord" type="tns:exitBorderRecordToDataEntryOffline"/>
+          <xs:element minOccurs="0" name="borderControlOfficer" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="entryBorderRecordToDataEntryOffline">
+    <xs:complexContent>
+      <xs:extension base="tns:borderRecord">
+        <xs:sequence>
+          <xs:element name="personStatusCode" type="xs:string"/>
+          <xs:element minOccurs="0" name="authorisationChangeToDataEntryOffline" type="tns:authorisationChangeToDataEntryOffline"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType abstract="true" name="borderRecord">
+    <xs:sequence>
+      <xs:element name="borderCrossingPoint" type="xs:string"/>
+      <xs:element name="borderCrossingTimestamp" type="xs:dateTime"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="authorisationChangeToDataEntryOffline">
+    <xs:complexContent>
+      <xs:extension base="tns:authorisationChange">
+        <xs:sequence>
+          <xs:element name="durationOfStay" type="xs:int"/>
+          <xs:element minOccurs="0" name="validUntilDate" type="xs:string"/>
+          <xs:element minOccurs="0" name="visaStickerNumber" type="xs:string"/>
+          <xs:element minOccurs="0" name="previousVisaStickerNumber" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType abstract="true" name="authorisationChange">
+    <xs:sequence>
+      <xs:element name="statusCode" type="xs:string"/>
+      <xs:element name="decisionAuthority" type="xs:string"/>
+      <xs:element name="decisionPlace" type="tns:authorisationPlace"/>
+      <xs:element name="decisionDate" type="xs:dateTime"/>
+      <xs:element maxOccurs="unbounded" name="changeGroundCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="changeOtherGround" type="xs:string"/>
+      <xs:element minOccurs="0" name="bilateralAgreementCode" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="authorisationPlace">
+    <xs:sequence>
+      <xs:element name="countryCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="placeRawValue" type="xs:string"/>
+      <xs:element minOccurs="0" name="placeSourceValue" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="placeSourceValuePreTransliterated" type="xs:boolean" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="authorisationChangeToEndBorderControl">
+    <xs:complexContent>
+      <xs:extension base="tns:authorisationChange">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="durationOfStay" type="xs:int"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="entryBorderRecordToEndBorderControl">
+    <xs:complexContent>
+      <xs:extension base="tns:borderRecord">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="authorisationChangeToEndBorderControl" type="tns:authorisationChangeToEndBorderControl"/>
+          <xs:element minOccurs="0" name="authorisedStayUntilDateTime" type="xs:dateTime"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="exitBorderRecordToDataEntryOffline">
+    <xs:complexContent>
+      <xs:extension base="tns:borderRecord">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="exitBorderRecordToEndBorderControl">
+    <xs:complexContent>
+      <xs:extension base="tns:borderRecord">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="authorisationChangeToEndBorderControl" type="tns:authorisationChangeToEndBorderControl"/>
+          <xs:element minOccurs="0" name="correspondingEntryRecord" type="tns:entryBorderRecordToEndBorderControl"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="eesBCDataEntryOfflineResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eesWFEAddDataToBorderControl">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="eesWFEAddDataToBorderControlData" type="tns:eesWFEAddDataToBorderControlData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eesWFEAddDataToBorderControlData">
+    <xs:complexContent>
+      <xs:extension base="tns:eesBaseQueryData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="wfeScopeModifiers" type="tns:wfeScopeModifiers"/>
+          <xs:element name="collectedDataToAddDataToBorderControl" type="tns:collectedDataToAddDataToBorderControl"/>
+          <xs:element name="borderCrossingPoint" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="collectedDataToAddDataToBorderControl">
+    <xs:sequence>
+      <xs:element name="travelDocumentIdentifier" type="tns:travelDocumentIdentifier"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="familyName" nillable="true" type="tns:nameSpellingData"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="firstName" nillable="true" type="tns:nameSpellingData"/>
+      <xs:element minOccurs="0" name="eesFacialImageInfo" type="tns:eesFacialImageInfo"/>
+      <xs:element minOccurs="0" name="eesFingerprintInfo" type="tns:eesFingerprintInfo"/>
+      <xs:element minOccurs="0" name="fiIdToBeStoredInTravellerFile" type="xs:string"/>
+      <xs:element minOccurs="0" name="fpIdToBeStoredInTravellerFile" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eesWFEAddDataToBorderControlResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getControlNumbers">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="deviceName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getControlNumbersResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ControlNumbersDTO">
+    <xs:sequence>
+      <xs:element name="pcn" type="xs:long"/>
+      <xs:element name="tcn" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eesWFEEndBorderControl">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="eesWFEEndBorderControlData" type="tns:eesWFEEndBorderControlData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eesWFEEndBorderControlData">
+    <xs:complexContent>
+      <xs:extension base="tns:eesBaseQueryData">
+        <xs:sequence>
+          <xs:element name="travelDocumentIdentifier" type="tns:travelDocumentIdentifier"/>
+          <xs:element minOccurs="0" name="entryRecord" type="tns:entryBorderRecordToEndBorderControl"/>
+          <xs:element minOccurs="0" name="exitRecord" type="tns:exitBorderRecordToEndBorderControl"/>
+          <xs:element minOccurs="0" name="fiIdToBeStoredInTravellerFile" type="xs:string"/>
+          <xs:element minOccurs="0" name="fpIdToBeStoredInTravellerFile" type="xs:string"/>
+          <xs:element name="borderCrossingPoint" type="xs:string"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="eesWFEEndBorderControlResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getOfflineDataBaseMetaInfo">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getOfflineDataBaseMetaInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="offlineDataBasesInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dummy" type="xs:boolean"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="offlineDataBaseInfoList" nillable="true" type="tns:offlineDataBaseInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="offlineDataBaseInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="systemName" type="xs:string"/>
+      <xs:element minOccurs="0" name="size" type="xs:long"/>
+      <xs:element minOccurs="0" name="md5Hash" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastUpdateTimestamp" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastUpdateUser" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eesPollingCheckEndPoint">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="eesPollingCheckEndPointResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getFullDetails">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="fullQueryData" type="tns:fullQueryData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getFullDetailsResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateOfflineDataBaseCopy">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="systemName" type="xs:string"/>
+      <xs:element minOccurs="0" name="dbPassword" type="xs:string"/>
+      <xs:element minOccurs="0" name="content" type="xs:base64Binary"/>
+      <xs:element minOccurs="0" name="dbFilePath" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="updateOfflineDataBaseCopyResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getIdentificationSummaries">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="clientInfo" type="tns:clientInfo"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getIdentificationSummariesResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getIdentificationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="identifierPCN" type="xs:string"/>
+      <xs:element minOccurs="0" name="autoDelete" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getIdentificationResultResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="identificationResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="dummy" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="identificationSummaries" type="tns:identificationSummaries"/>
+      <xs:element minOccurs="0" name="multiQueryResult" type="tns:multiQueryResult"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eesTCCheckEndPoint">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="eesTCCheckEndPointResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getAttachmentContent">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="attachmentQueryData" type="tns:attachmentQueryData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="attachmentQueryData">
+    <xs:complexContent>
+      <xs:extension base="tns:baseQueryData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="attachment" type="tns:Attachment"/>
+          <xs:element name="hitIdentifier" type="tns:hitIdentifier"/>
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="getAttachmentContentResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="removeIdentificationRequest">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="identifierPCN" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="removeIdentificationRequestResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="killConcurrentUserSession">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="concurrentUserData" type="tns:concurrentUserData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="killConcurrentUserSessionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="eesWFECheckEndPoint">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="eesWFECheckEndPointResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getControlNumbersConfig">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="getControlNumbersConfigResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="systemControlSequencesDTO">
+    <xs:sequence>
+      <xs:element name="pcnCurrentRunningNumber" type="xs:long"/>
+      <xs:element name="pcnPrefix" type="xs:string"/>
+      <xs:element name="tcnCurrentRunningNumber" type="xs:long"/>
+      <xs:element name="tcnYear" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ping">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="pingResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="setControlNumbersConfig">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="controlNumbersConfig" type="tns:systemControlSequencesDTO"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="setControlNumbersConfigResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:resultWrapper"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="CvisEndUserRole">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="BORDER_CHECK"/>
+      <xs:enumeration value="TERRITORY_CHECK"/>
+      <xs:enumeration value="ASYLUM_EXAMINATION"/>
+      <xs:enumeration value="ENFORCEMENT_DIRECT"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="faultType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="INVALID_SAML_ASSERTION"/>
+      <xs:enumeration value="AUTH_FAILURE"/>
+      <xs:enumeration value="NO_SUCH_SYSTEM"/>
+      <xs:enumeration value="TEMPLATE"/>
+      <xs:enumeration value="REMOTE_ERROR"/>
+      <xs:enumeration value="AUTHENTICATION_REQUIRED"/>
+      <xs:enumeration value="CONCURRENT_USERS_LIMIT"/>
+      <xs:enumeration value="DATABASE_PERSIST_ERROR"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="SystemType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SEARCH"/>
+      <xs:enumeration value="ADMINISTRATION_MANDATORY"/>
+      <xs:enumeration value="ADMINISTRATION_OPTIONAL"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="DocumentType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PASSPORT"/>
+      <xs:enumeration value="PASSPORT_REFUGEE"/>
+      <xs:enumeration value="ID"/>
+      <xs:enumeration value="PERMIT"/>
+      <xs:enumeration value="VISA_A"/>
+      <xs:enumeration value="VISA_C"/>
+      <xs:enumeration value="VISA_D"/>
+      <xs:enumeration value="DRIVERS_LICENSE"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="aliasMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ALL"/>
+      <xs:enumeration value="ONLY_HITTING_ALIASES"/>
+      <xs:enumeration value="NONE"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="fingerPosition">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="RIGHT_THUMB"/>
+      <xs:enumeration value="RIGHT_INDEX"/>
+      <xs:enumeration value="RIGHT_MIDDLE"/>
+      <xs:enumeration value="RIGHT_RING"/>
+      <xs:enumeration value="RIGHT_LITTLE"/>
+      <xs:enumeration value="LEFT_THUMB"/>
+      <xs:enumeration value="LEFT_INDEX"/>
+      <xs:enumeration value="LEFT_MIDDLE"/>
+      <xs:enumeration value="LEFT_RING"/>
+      <xs:enumeration value="LEFT_LITTLE"/>
+      <xs:enumeration value="PLAIN_RIGHT_THUMB"/>
+      <xs:enumeration value="PLAIN_LEFT_THUMB"/>
+      <xs:enumeration value="PLAIN_RIGHT_4_FINGERS"/>
+      <xs:enumeration value="PLAIN_LEFT_4_FINGERS"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="impressionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="LIVE_SCAN_PLAIN"/>
+      <xs:enumeration value="LIVE_SCAN_ROLLED"/>
+      <xs:enumeration value="NON_LIVE_PLAIN_FROM_PAPER"/>
+      <xs:enumeration value="NON_LIVE_ROLLED_FROM_PAPER"/>
+      <xs:enumeration value="LATENT_DIRECT"/>
+      <xs:enumeration value="LATENT_TRACING"/>
+      <xs:enumeration value="LATENT_PHOTO"/>
+      <xs:enumeration value="LATENT_LIFT"/>
+      <xs:enumeration value="SWIPE"/>
+      <xs:enumeration value="UNKNOWN"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="reason">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="AMPUTATION"/>
+      <xs:enumeration value="UNABLE_TO_PRINT"/>
+      <xs:enumeration value="NO_INFORMATION"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="eesFingerprintImpressionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PLAIN_CONTACT"/>
+      <xs:enumeration value="ROLLED_CONTACT"/>
+      <xs:enumeration value="LATENT_IMAGE"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="eesFingerprintTransmittedPixelScaleType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SCALE_500"/>
+      <xs:enumeration value="SCALE_1000"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="eesFingerprintCompressionAlgorithmType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="WSQ20"/>
+      <xs:enumeration value="JP2"/>
+      <xs:enumeration value="JP2L"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="imageFetching">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ALL"/>
+      <xs:enumeration value="EXACT_ONLY"/>
+      <xs:enumeration value="BEST_HIT_ONLY"/>
+      <xs:enumeration value="NONE"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="QueryParameterKey">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FIRST_NAME"/>
+      <xs:enumeration value="FAMILY_NAME"/>
+      <xs:enumeration value="BIRTH_DATE_FROM"/>
+      <xs:enumeration value="BIRTH_DATE_TO"/>
+      <xs:enumeration value="PERSON_PLACE"/>
+      <xs:enumeration value="PERSON_STREET_NAME"/>
+      <xs:enumeration value="PERSON_HOUSE_NUMBER"/>
+      <xs:enumeration value="PERSON_ZIP_CODE"/>
+      <xs:enumeration value="PERSON_CANTON"/>
+      <xs:enumeration value="PERSON_COMPANY_NUMBER"/>
+      <xs:enumeration value="PERSON_COMPANY_SECTOR"/>
+      <xs:enumeration value="PERSON_EDV_NUMBER_FROM"/>
+      <xs:enumeration value="PERSON_EDV_NUMBER_TO"/>
+      <xs:enumeration value="PERSON_EDV_NUMBER_2_FROM"/>
+      <xs:enumeration value="PERSON_EDV_NUMBER_2_TO"/>
+      <xs:enumeration value="PERSON_GENDER"/>
+      <xs:enumeration value="DOCUMENT_NUMBER"/>
+      <xs:enumeration value="DOCUMENT_COUNTRY"/>
+      <xs:enumeration value="DOCUMENT_EXPIRY_DATE_FROM"/>
+      <xs:enumeration value="DOCUMENT_EXPIRY_DATE_TO"/>
+      <xs:enumeration value="LICENSE_PLATE"/>
+      <xs:enumeration value="COUNTRY"/>
+      <xs:enumeration value="VIN"/>
+      <xs:enumeration value="VEHICLE_TYPE"/>
+      <xs:enumeration value="MOTOR_NUMBER"/>
+      <xs:enumeration value="MASTER_NUMBER"/>
+      <xs:enumeration value="OBJECT_IDENTIFICATION_NUMBER"/>
+      <xs:enumeration value="OBJECT_COUNTRY"/>
+      <xs:enumeration value="OBJECT_ENGRAVED_TEXT"/>
+      <xs:enumeration value="OBJECT_DATE_OF_ENGRAVED_TEXT"/>
+      <xs:enumeration value="OBJECT_TYPE"/>
+      <xs:enumeration value="OBJECT_DATE_FROM"/>
+      <xs:enumeration value="OBJECT_DATE_TO"/>
+      <xs:enumeration value="CASE_NUMBER"/>
+      <xs:enumeration value="NEWS_NUMBER"/>
+      <xs:enumeration value="NEWS_KEYWORD"/>
+      <xs:enumeration value="NEWS_DATE_FROM"/>
+      <xs:enumeration value="NEWS_DATE_TO"/>
+      <xs:enumeration value="PCN_NUMBER"/>
+      <xs:enumeration value="NIST_FILE"/>
+      <xs:enumeration value="IDENTIFICATION_FAMILY_NAME"/>
+      <xs:enumeration value="IDENTIFICATION_FIRST_NAME"/>
+      <xs:enumeration value="IDENTIFICATION_BIRTH_DATE_FROM"/>
+      <xs:enumeration value="IDENTIFICATION_BIRTH_DATE_TO"/>
+      <xs:enumeration value="IDENTIFICATION_ANY_NAME"/>
+      <xs:enumeration value="IDENTIFICATION_GENDER_CODE"/>
+      <xs:enumeration value="IDENTIFICATION_BIRTH_PLACE"/>
+      <xs:enumeration value="IDENTIFICATION_BIRTH_COUNTRY_CODE"/>
+      <xs:enumeration value="IDENTIFICATION_BIRTH_NATIONALITY_CODE"/>
+      <xs:enumeration value="IDENTIFICATION_NATIONALITY_CODE"/>
+      <xs:enumeration value="IDENTIFICATION_DOCUMENT_NUMBER"/>
+      <xs:enumeration value="IDENTIFICATION_DOCUMENT_TYPE_CODE"/>
+      <xs:enumeration value="IDENTIFICATION_DOCUMENT_ISSUING_DATE_FROM"/>
+      <xs:enumeration value="IDENTIFICATION_DOCUMENT_ISSUING_DATE_TO"/>
+      <xs:enumeration value="IDENTIFICATION_DOCUMENT_ISSUING_AUTHORITY"/>
+      <xs:enumeration value="IDENTIFICATION_DOCUMENT_ISSUING_COUNTRY_CODE"/>
+      <xs:enumeration value="IDENTIFICATION_DOCUMENT_EXPIRY_DATE_FROM"/>
+      <xs:enumeration value="IDENTIFICATION_DOCUMENT_EXPIRY_DATE_TO"/>
+      <xs:enumeration value="IDENTIFICATION_PHONETIC"/>
+      <xs:enumeration value="IDENTIFICATION_SESSION_ID"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PersonGender">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MALE"/>
+      <xs:enumeration value="FEMALE"/>
+      <xs:enumeration value="UNKNOWN"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="QueryType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PERSON"/>
+      <xs:enumeration value="PERSON_AND_DOCUMENT"/>
+      <xs:enumeration value="DOCUMENT"/>
+      <xs:enumeration value="VEHICLE"/>
+      <xs:enumeration value="OBJECT"/>
+      <xs:enumeration value="CASE"/>
+      <xs:enumeration value="NEWS"/>
+      <xs:enumeration value="ALL"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="SearchCombination">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MRZ_PRAEZIS"/>
+      <xs:enumeration value="MRZ_FUZZY"/>
+      <xs:enumeration value="SEARCH"/>
+      <xs:enumeration value="MRZ_SEARCH"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="SearchType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="EXACT"/>
+      <xs:enumeration value="EXTENDED"/>
+      <xs:enumeration value="PHONETIC"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="LogStatisticsQueryType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MRZ"/>
+      <xs:enumeration value="LICENSE_PLATE"/>
+      <xs:enumeration value="MANUAL_SEARCH"/>
+      <xs:enumeration value="FP_IDENTIFICATION"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ApplicationConfigType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MOBILE"/>
+      <xs:enumeration value="FIRST_LINE_OUTER_BORDER"/>
+      <xs:enumeration value="SECOND_LINE_OUTER_BORDER"/>
+      <xs:enumeration value="INNER_BORDER"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="DocumentCardType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NONE_OR_UNKNOWN"/>
+      <xs:enumeration value="PASSPORT"/>
+      <xs:enumeration value="VISA"/>
+      <xs:enumeration value="ID"/>
+      <xs:enumeration value="DRIVERS_LICENSE"/>
+      <xs:enumeration value="RESIDENCE_PERMIT"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TravelDirectionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="UNDEFINED"/>
+      <xs:enumeration value="ENTRY"/>
+      <xs:enumeration value="EXIT"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="LanguageType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="DE"/>
+      <xs:enumeration value="FR"/>
+      <xs:enumeration value="IT"/>
+      <xs:enumeration value="EN"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Exactitude">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="HIT_IS_EXACT"/>
+      <xs:enumeration value="HIT_GROUP_HAS_EXACT"/>
+      <xs:enumeration value="HIT_HAS_EXACT_RELATED_HIT"/>
+      <xs:enumeration value="HIT_HAS_RELATED_HIT"/>
+      <xs:enumeration value="NONE"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="HitType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PERSON"/>
+      <xs:enumeration value="DOCUMENT"/>
+      <xs:enumeration value="GROUND_VEHICLE"/>
+      <xs:enumeration value="BOAT"/>
+      <xs:enumeration value="BOAT_ENGINE"/>
+      <xs:enumeration value="WEAPON"/>
+      <xs:enumeration value="CONTAINER"/>
+      <xs:enumeration value="VEHICLE_REGISTRATION_DOCUMENT"/>
+      <xs:enumeration value="AIRCRAFT"/>
+      <xs:enumeration value="AIRCRAFT_ENGINE"/>
+      <xs:enumeration value="LICENSE_PLATE"/>
+      <xs:enumeration value="INDUSTRIAL_EQUIPMENT"/>
+      <xs:enumeration value="INDUSTRIAL_EQUIPMENT_PART"/>
+      <xs:enumeration value="SECURITIES"/>
+      <xs:enumeration value="BLANK_DOCUMENT"/>
+      <xs:enumeration value="BANKNOTE"/>
+      <xs:enumeration value="CASE"/>
+      <xs:enumeration value="NEWS"/>
+      <xs:enumeration value="FL_OBJECT"/>
+      <xs:enumeration value="FL_WEAPON"/>
+      <xs:enumeration value="FL_IDCARD"/>
+      <xs:enumeration value="FL_ANIMAL"/>
+      <xs:enumeration value="RIPOL_NSF_OBJECT"/>
+      <xs:enumeration value="VEHICLE_PART"/>
+      <xs:enumeration value="INFORMATION_TECHNOLOGY_EQUIPMENT"/>
+      <xs:enumeration value="PERSON_ECH"/>
+      <xs:enumeration value="MEANS_OF_COMMUNICATION_ECH"/>
+      <xs:enumeration value="ADDRESS_ECH"/>
+      <xs:enumeration value="VEHICLE_ECH"/>
+      <xs:enumeration value="DOCUMENT_ECH"/>
+      <xs:enumeration value="ALIAS_ECH"/>
+      <xs:enumeration value="WEAPON_ECH"/>
+      <xs:enumeration value="IMPRISONMENT_ECH"/>
+      <xs:enumeration value="SIDE_PERSON_ECH"/>
+      <xs:enumeration value="LICENSE_PLATE_ECH"/>
+      <xs:enumeration value="OBJECT_ECH"/>
+      <xs:enumeration value="ENGRAVING_ECH"/>
+      <xs:enumeration value="IDENTIFICATION_NUMBER_ECH"/>
+      <xs:enumeration value="MEASUREMENT_ECH"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="HeadingType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="H1"/>
+      <xs:enumeration value="H2"/>
+      <xs:enumeration value="H3"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="HighlightType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="HIGHLIGHT_GREEN"/>
+      <xs:enumeration value="HIGHLIGHT_RED"/>
+      <xs:enumeration value="HIGHLIGHT_YELLOW"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="codeGroup">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NATIONALITY"/>
+      <xs:enumeration value="CURRENCY"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="IdentityType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="REAL"/>
+      <xs:enumeration value="ALIAS"/>
+      <xs:enumeration value="SINGLE"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="fingerprintMatch">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="MATCH"/>
+      <xs:enumeration value="NO_MATCH"/>
+      <xs:enumeration value="NOT_AVAILABLE"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TypeOfInvolvedParty">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PERSON"/>
+      <xs:enumeration value="ORGANIZATION"/>
+      <xs:enumeration value="UNKNOWN_PERSON"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TypeOfAuth">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="REAL"/>
+      <xs:enumeration value="FORGED"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TypeOfChangeableLicensePlate">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NOT_AVAILABLE"/>
+      <xs:enumeration value="YES"/>
+      <xs:enumeration value="NO"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TypeOfLicensePlate">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FRONT"/>
+      <xs:enumeration value="REAR"/>
+      <xs:enumeration value="PAIR"/>
+      <xs:enumeration value="SINGLE"/>
+      <xs:enumeration value="NONE"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TypeOfCountMode">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NORMAL"/>
+      <xs:enumeration value="APPROX"/>
+      <xs:enumeration value="UNKNOWN"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="filterStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="QUERY_DONE"/>
+      <xs:enumeration value="INSUFFICIENT_PARAMETERS"/>
+      <xs:enumeration value="OUT_OF_SCOPE"/>
+      <xs:enumeration value="ASYNC_OPERATION_STARTED"/>
+      <xs:enumeration value="FAILED_AUTHENTICATION"/>
+      <xs:enumeration value="DEACTIVATED"/>
+      <xs:enumeration value="FORBIDDEN_COMBINED_SEARCH"/>
+      <xs:enumeration value="CANCELLED_AUTHENTICATION"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="summaryType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PERSON"/>
+      <xs:enumeration value="DOCUMENT"/>
+      <xs:enumeration value="VEHICLE"/>
+      <xs:enumeration value="OBJECT"/>
+      <xs:enumeration value="CASE"/>
+      <xs:enumeration value="NEWS"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="identificationErrorType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="NONE"/>
+      <xs:enumeration value="TECHNICAL_ERROR"/>
+      <xs:enumeration value="REJECT"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="identificationState">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="PENDING"/>
+      <xs:enumeration value="COMPLETED"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="transactionTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="INSERT"/>
+      <xs:enumeration value="UPDATE"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="eesFacialImageCompressionAlgorithmType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="JPEGB"/>
+      <xs:enumeration value="JP2"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="openSession">
+    <wsdl:part element="tns:openSession" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getControlNumbersResponse">
+    <wsdl:part element="tns:getControlNumbersResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="pingResponse">
+    <wsdl:part element="tns:pingResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="eesWFEAddDataToBorderControlResponse">
+    <wsdl:part element="tns:eesWFEAddDataToBorderControlResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getHtmlForLink">
+    <wsdl:part element="tns:getHtmlForLink" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getConcurrentUsers">
+    <wsdl:part element="tns:getConcurrentUsers" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getConcurrentUsersResponse">
+    <wsdl:part element="tns:getConcurrentUsersResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="eesBCCheckEndPoint">
+    <wsdl:part element="tns:eesBCCheckEndPoint" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="eesWFEEndBorderControlResponse">
+    <wsdl:part element="tns:eesWFEEndBorderControlResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="eesWFEIdentificationResult">
+    <wsdl:part element="tns:eesWFEIdentificationResult" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getIdentificationResultResponse">
+    <wsdl:part element="tns:getIdentificationResultResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveHLStatistics">
+    <wsdl:part element="tns:saveHLStatistics" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getControlNumbersConfigResponse">
+    <wsdl:part element="tns:getControlNumbersConfigResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="pingSAMLAuthenticated">
+    <wsdl:part element="tns:pingSAMLAuthenticated" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="eesWFEStartBorderControl">
+    <wsdl:part element="tns:eesWFEStartBorderControl" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="closeSession">
+    <wsdl:part element="tns:closeSession" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="multiQueryResponse">
+    <wsdl:part element="tns:multiQueryResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="eesWFEIdentificationResultResponse">
+    <wsdl:part element="tns:eesWFEIdentificationResultResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="eesBCDataEntryOffline">
+    <wsdl:part element="tns:eesBCDataEntryOffline" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="eesBCCheckEndPointResponse">
+    <wsdl:part element="tns:eesBCCheckEndPointResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getFullDetailsResponse">
+    <wsdl:part element="tns:getFullDetailsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeIdentificationRequestResponse">
+    <wsdl:part element="tns:removeIdentificationRequestResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="eesWFEAddDataToBorderControl">
+    <wsdl:part element="tns:eesWFEAddDataToBorderControl" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getControlNumbers">
+    <wsdl:part element="tns:getControlNumbers" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="eesPollingCheckEndPointResponse">
+    <wsdl:part element="tns:eesPollingCheckEndPointResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOfflineDataBaseMetaInfo">
+    <wsdl:part element="tns:getOfflineDataBaseMetaInfo" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getIdentificationSummaries">
+    <wsdl:part element="tns:getIdentificationSummaries" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getIdentificationResult">
+    <wsdl:part element="tns:getIdentificationResult" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="eesTCCheckEndPointResponse">
+    <wsdl:part element="tns:eesTCCheckEndPointResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="removeIdentificationRequest">
+    <wsdl:part element="tns:removeIdentificationRequest" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="eesWFECheckEndPoint">
+    <wsdl:part element="tns:eesWFECheckEndPoint" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getHtmlForLinkResponse">
+    <wsdl:part element="tns:getHtmlForLinkResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="flushSAMLAuthenticationResponse">
+    <wsdl:part element="tns:flushSAMLAuthenticationResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="saveHLStatisticsResponse">
+    <wsdl:part element="tns:saveHLStatisticsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getControlNumbersConfig">
+    <wsdl:part element="tns:getControlNumbersConfig" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ping">
+    <wsdl:part element="tns:ping" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="multiQuery">
+    <wsdl:part element="tns:multiQuery" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="eesWFEAbortBorderControl">
+    <wsdl:part element="tns:eesWFEAbortBorderControl" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="identificationResultReceived">
+    <wsdl:part element="tns:identificationResultReceived" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="eesWFEAbortBorderControlResponse">
+    <wsdl:part element="tns:eesWFEAbortBorderControlResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="eesBCDataEntryOfflineResponse">
+    <wsdl:part element="tns:eesBCDataEntryOfflineResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="flushSAMLAuthentication">
+    <wsdl:part element="tns:flushSAMLAuthentication" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fetchImagesResponse">
+    <wsdl:part element="tns:fetchImagesResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="killConcurrentUserSessionResponse">
+    <wsdl:part element="tns:killConcurrentUserSessionResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="identificationResultReceivedResponse">
+    <wsdl:part element="tns:identificationResultReceivedResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="closeSessionResponse">
+    <wsdl:part element="tns:closeSessionResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="fetchImages">
+    <wsdl:part element="tns:fetchImages" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateOfflineDataBaseCopyResponse">
+    <wsdl:part element="tns:updateOfflineDataBaseCopyResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="eesWFEStartBorderControlResponse">
+    <wsdl:part element="tns:eesWFEStartBorderControlResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="openSessionResponse">
+    <wsdl:part element="tns:openSessionResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setControlNumbersConfigResponse">
+    <wsdl:part element="tns:setControlNumbersConfigResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="eesWFEEndBorderControl">
+    <wsdl:part element="tns:eesWFEEndBorderControl" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="pingSAMLAuthenticatedResponse">
+    <wsdl:part element="tns:pingSAMLAuthenticatedResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getIdentificationSummariesResponse">
+    <wsdl:part element="tns:getIdentificationSummariesResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="eesPollingCheckEndPoint">
+    <wsdl:part element="tns:eesPollingCheckEndPoint" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getFullDetails">
+    <wsdl:part element="tns:getFullDetails" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateOfflineDataBaseCopy">
+    <wsdl:part element="tns:updateOfflineDataBaseCopy" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOfflineDataBaseMetaInfoResponse">
+    <wsdl:part element="tns:getOfflineDataBaseMetaInfoResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="eesTCCheckEndPoint">
+    <wsdl:part element="tns:eesTCCheckEndPoint" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAttachmentContent">
+    <wsdl:part element="tns:getAttachmentContent" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="killConcurrentUserSession">
+    <wsdl:part element="tns:killConcurrentUserSession" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getAttachmentContentResponse">
+    <wsdl:part element="tns:getAttachmentContentResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="eesWFECheckEndPointResponse">
+    <wsdl:part element="tns:eesWFECheckEndPointResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="setControlNumbersConfig">
+    <wsdl:part element="tns:setControlNumbersConfig" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="ManagedQueryService">
+    <wsdl:operation name="multiQuery">
+      <wsdl:input message="tns:multiQuery" name="multiQuery">
+    </wsdl:input>
+      <wsdl:output message="tns:multiQueryResponse" name="multiQueryResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="openSession">
+      <wsdl:input message="tns:openSession" name="openSession">
+    </wsdl:input>
+      <wsdl:output message="tns:openSessionResponse" name="openSessionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eesWFEAbortBorderControl">
+      <wsdl:input message="tns:eesWFEAbortBorderControl" name="eesWFEAbortBorderControl">
+    </wsdl:input>
+      <wsdl:output message="tns:eesWFEAbortBorderControlResponse" name="eesWFEAbortBorderControlResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="identificationResultReceived">
+      <wsdl:input message="tns:identificationResultReceived" name="identificationResultReceived">
+    </wsdl:input>
+      <wsdl:output message="tns:identificationResultReceivedResponse" name="identificationResultReceivedResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHtmlForLink">
+      <wsdl:input message="tns:getHtmlForLink" name="getHtmlForLink">
+    </wsdl:input>
+      <wsdl:output message="tns:getHtmlForLinkResponse" name="getHtmlForLinkResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConcurrentUsers">
+      <wsdl:input message="tns:getConcurrentUsers" name="getConcurrentUsers">
+    </wsdl:input>
+      <wsdl:output message="tns:getConcurrentUsersResponse" name="getConcurrentUsersResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="flushSAMLAuthentication">
+      <wsdl:input message="tns:flushSAMLAuthentication" name="flushSAMLAuthentication">
+    </wsdl:input>
+      <wsdl:output message="tns:flushSAMLAuthenticationResponse" name="flushSAMLAuthenticationResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eesBCCheckEndPoint">
+      <wsdl:input message="tns:eesBCCheckEndPoint" name="eesBCCheckEndPoint">
+    </wsdl:input>
+      <wsdl:output message="tns:eesBCCheckEndPointResponse" name="eesBCCheckEndPointResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eesWFEIdentificationResult">
+      <wsdl:input message="tns:eesWFEIdentificationResult" name="eesWFEIdentificationResult">
+    </wsdl:input>
+      <wsdl:output message="tns:eesWFEIdentificationResultResponse" name="eesWFEIdentificationResultResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveHLStatistics">
+      <wsdl:input message="tns:saveHLStatistics" name="saveHLStatistics">
+    </wsdl:input>
+      <wsdl:output message="tns:saveHLStatisticsResponse" name="saveHLStatisticsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchImages">
+      <wsdl:input message="tns:fetchImages" name="fetchImages">
+    </wsdl:input>
+      <wsdl:output message="tns:fetchImagesResponse" name="fetchImagesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pingSAMLAuthenticated">
+      <wsdl:input message="tns:pingSAMLAuthenticated" name="pingSAMLAuthenticated">
+    </wsdl:input>
+      <wsdl:output message="tns:pingSAMLAuthenticatedResponse" name="pingSAMLAuthenticatedResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eesWFEStartBorderControl">
+      <wsdl:input message="tns:eesWFEStartBorderControl" name="eesWFEStartBorderControl">
+    </wsdl:input>
+      <wsdl:output message="tns:eesWFEStartBorderControlResponse" name="eesWFEStartBorderControlResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="closeSession">
+      <wsdl:input message="tns:closeSession" name="closeSession">
+    </wsdl:input>
+      <wsdl:output message="tns:closeSessionResponse" name="closeSessionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eesBCDataEntryOffline">
+      <wsdl:input message="tns:eesBCDataEntryOffline" name="eesBCDataEntryOffline">
+    </wsdl:input>
+      <wsdl:output message="tns:eesBCDataEntryOfflineResponse" name="eesBCDataEntryOfflineResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eesWFEAddDataToBorderControl">
+      <wsdl:input message="tns:eesWFEAddDataToBorderControl" name="eesWFEAddDataToBorderControl">
+    </wsdl:input>
+      <wsdl:output message="tns:eesWFEAddDataToBorderControlResponse" name="eesWFEAddDataToBorderControlResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getControlNumbers">
+      <wsdl:input message="tns:getControlNumbers" name="getControlNumbers">
+    </wsdl:input>
+      <wsdl:output message="tns:getControlNumbersResponse" name="getControlNumbersResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eesWFEEndBorderControl">
+      <wsdl:input message="tns:eesWFEEndBorderControl" name="eesWFEEndBorderControl">
+    </wsdl:input>
+      <wsdl:output message="tns:eesWFEEndBorderControlResponse" name="eesWFEEndBorderControlResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOfflineDataBaseMetaInfo">
+      <wsdl:input message="tns:getOfflineDataBaseMetaInfo" name="getOfflineDataBaseMetaInfo">
+    </wsdl:input>
+      <wsdl:output message="tns:getOfflineDataBaseMetaInfoResponse" name="getOfflineDataBaseMetaInfoResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eesPollingCheckEndPoint">
+      <wsdl:input message="tns:eesPollingCheckEndPoint" name="eesPollingCheckEndPoint">
+    </wsdl:input>
+      <wsdl:output message="tns:eesPollingCheckEndPointResponse" name="eesPollingCheckEndPointResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFullDetails">
+      <wsdl:input message="tns:getFullDetails" name="getFullDetails">
+    </wsdl:input>
+      <wsdl:output message="tns:getFullDetailsResponse" name="getFullDetailsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateOfflineDataBaseCopy">
+      <wsdl:input message="tns:updateOfflineDataBaseCopy" name="updateOfflineDataBaseCopy">
+    </wsdl:input>
+      <wsdl:output message="tns:updateOfflineDataBaseCopyResponse" name="updateOfflineDataBaseCopyResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIdentificationSummaries">
+      <wsdl:input message="tns:getIdentificationSummaries" name="getIdentificationSummaries">
+    </wsdl:input>
+      <wsdl:output message="tns:getIdentificationSummariesResponse" name="getIdentificationSummariesResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIdentificationResult">
+      <wsdl:input message="tns:getIdentificationResult" name="getIdentificationResult">
+    </wsdl:input>
+      <wsdl:output message="tns:getIdentificationResultResponse" name="getIdentificationResultResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eesTCCheckEndPoint">
+      <wsdl:input message="tns:eesTCCheckEndPoint" name="eesTCCheckEndPoint">
+    </wsdl:input>
+      <wsdl:output message="tns:eesTCCheckEndPointResponse" name="eesTCCheckEndPointResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAttachmentContent">
+      <wsdl:input message="tns:getAttachmentContent" name="getAttachmentContent">
+    </wsdl:input>
+      <wsdl:output message="tns:getAttachmentContentResponse" name="getAttachmentContentResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeIdentificationRequest">
+      <wsdl:input message="tns:removeIdentificationRequest" name="removeIdentificationRequest">
+    </wsdl:input>
+      <wsdl:output message="tns:removeIdentificationRequestResponse" name="removeIdentificationRequestResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="killConcurrentUserSession">
+      <wsdl:input message="tns:killConcurrentUserSession" name="killConcurrentUserSession">
+    </wsdl:input>
+      <wsdl:output message="tns:killConcurrentUserSessionResponse" name="killConcurrentUserSessionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eesWFECheckEndPoint">
+      <wsdl:input message="tns:eesWFECheckEndPoint" name="eesWFECheckEndPoint">
+    </wsdl:input>
+      <wsdl:output message="tns:eesWFECheckEndPointResponse" name="eesWFECheckEndPointResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getControlNumbersConfig">
+      <wsdl:input message="tns:getControlNumbersConfig" name="getControlNumbersConfig">
+    </wsdl:input>
+      <wsdl:output message="tns:getControlNumbersConfigResponse" name="getControlNumbersConfigResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <wsdl:input message="tns:ping" name="ping">
+    </wsdl:input>
+      <wsdl:output message="tns:pingResponse" name="pingResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setControlNumbersConfig">
+      <wsdl:input message="tns:setControlNumbersConfig" name="setControlNumbersConfig">
+    </wsdl:input>
+      <wsdl:output message="tns:setControlNumbersConfigResponse" name="setControlNumbersConfigResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ManagedQueryServiceSoapBinding" type="tns:ManagedQueryService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="openSession">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="openSession">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="openSessionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="multiQuery">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="multiQuery">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="multiQueryResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eesWFEAbortBorderControl">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="eesWFEAbortBorderControl">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="eesWFEAbortBorderControlResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="identificationResultReceived">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="identificationResultReceived">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="identificationResultReceivedResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getHtmlForLink">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getHtmlForLink">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getHtmlForLinkResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getConcurrentUsers">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getConcurrentUsers">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getConcurrentUsersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="flushSAMLAuthentication">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="flushSAMLAuthentication">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="flushSAMLAuthenticationResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eesBCCheckEndPoint">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="eesBCCheckEndPoint">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="eesBCCheckEndPointResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eesWFEIdentificationResult">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="eesWFEIdentificationResult">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="eesWFEIdentificationResultResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="saveHLStatistics">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="saveHLStatistics">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="saveHLStatisticsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="fetchImages">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="fetchImages">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="fetchImagesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="pingSAMLAuthenticated">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="pingSAMLAuthenticated">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="pingSAMLAuthenticatedResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eesWFEStartBorderControl">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="eesWFEStartBorderControl">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="eesWFEStartBorderControlResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="closeSession">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="closeSession">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="closeSessionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eesBCDataEntryOffline">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="eesBCDataEntryOffline">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="eesBCDataEntryOfflineResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eesWFEAddDataToBorderControl">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="eesWFEAddDataToBorderControl">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="eesWFEAddDataToBorderControlResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getControlNumbers">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getControlNumbers">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getControlNumbersResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eesWFEEndBorderControl">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="eesWFEEndBorderControl">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="eesWFEEndBorderControlResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOfflineDataBaseMetaInfo">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getOfflineDataBaseMetaInfo">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getOfflineDataBaseMetaInfoResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eesPollingCheckEndPoint">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="eesPollingCheckEndPoint">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="eesPollingCheckEndPointResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFullDetails">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getFullDetails">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getFullDetailsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateOfflineDataBaseCopy">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="updateOfflineDataBaseCopy">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="updateOfflineDataBaseCopyResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIdentificationSummaries">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getIdentificationSummaries">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getIdentificationSummariesResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getIdentificationResult">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getIdentificationResult">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getIdentificationResultResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eesTCCheckEndPoint">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="eesTCCheckEndPoint">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="eesTCCheckEndPointResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getAttachmentContent">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getAttachmentContent">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getAttachmentContentResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="removeIdentificationRequest">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="removeIdentificationRequest">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="removeIdentificationRequestResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="killConcurrentUserSession">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="killConcurrentUserSession">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="killConcurrentUserSessionResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="eesWFECheckEndPoint">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="eesWFECheckEndPoint">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="eesWFECheckEndPointResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getControlNumbersConfig">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getControlNumbersConfig">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getControlNumbersConfigResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ping">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="ping">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="pingResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="setControlNumbersConfig">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="setControlNumbersConfig">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="setControlNumbersConfigResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ManagedQueryService">
+    <wsdl:port binding="tns:ManagedQueryServiceSoapBinding" name="ManagedQueryServiceImplPort">
+      <soap:address location="http://localhost:8082/services/managedQueryService"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
